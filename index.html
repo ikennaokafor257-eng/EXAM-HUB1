@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam Hub — Premium Exam Updates</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-ring"></div>
+    <p>Launching Exam Hub...</p>
+  </div>
+
+  <header class="hero-header">
+    <nav class="navbar container" id="navbar">
+      <a class="brand" href="#home">EXAM HUB</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#updates">Latest Updates</a>
+        <a href="#vip">VIP Access</a>
+        <a href="#contact">Contact</a>
+        <a href="admin.html" class="admin-link">Admin Panel</a>
+      </div>
+      <div class="nav-actions">
+        <button class="mode-toggle" id="modeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <section class="hero container" id="home">
+      <div class="hero-copy glass-card">
+        <span class="eyebrow">Premium Exam Alerts</span>
+        <h1>Get Fast <span class="glow-text"></span></h1>
+        <p>Receive fast exam updates, verified information, and premium access directly on your device.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-glow" href="https://wa.me/9135058474" target="_blank" rel="noreferrer">Join WhatsApp</a>
+          <a class="btn btn-outline" href="https://t.me/IKAY01" target="_blank" rel="noreferrer">Join Telegram</a>
+          <a class="btn btn-primary" href="#vip">Get Access</a>
+        </div>
+      </div>
+      <div class="hero-panel glass-card hero-panel-right">
+        <div class="hero-glow"></div>
+        <div class="hero-stats">
+          <div>
+            <strong>24/7</strong>
+            <span>Live Updates</span>
+          </div>
+          <div>
+            <strong>VIP</strong>
+            <span>Secure Access</span>
+          </div>
+          <div>
+            <strong>Fast</strong>
+            <span>Verified Alerts</span>
+          </div>
+        </div>
+        <div class="hero-card-footer">
+          <div class="indicator"></div>
+          <div>
+            <p>Connect via WhatsApp:</p>
+            <a href="https://wa.me/9135058474" target="_blank" rel="noreferrer">+9135058474</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="stats-section container">
+      <div class="counter-card glass-card reveal">
+        <h3 id="counter1">0</h3>
+        <p>Real Updates</p>
+      </div>
+      <div class="counter-card glass-card reveal">
+        <h3 id="counter2">0</h3>
+        <p>VIP Subscribers</p>
+      </div>
+      <div class="counter-card glass-card reveal">
+        <h3 id="counter3">0</h3>
+        <p>Daily Drops</p>
+      </div>
+    </section>
+
+    <section class="live-updates container" id="updates">
+      <div class="section-header reveal">
+        <p>Insights</p>
+        <h2>Live Updates Feed</h2>
+      </div>
+      <div class="updates-grid">
+        <article class="update-card glass-card reveal">
+          <h3>WAEC Updates</h3>
+          <p>Verified exam alerts, schedule changes, and premium downloads.</p>
+        </article>
+        <article class="update-card glass-card reveal">
+          <h3>NECO Updates</h3>
+          <p>Real-time exam uploads, answer notes, and announcement alerts.</p>
+        </article>
+        <article class="update-card glass-card reveal">
+          <h3>JAMB Updates</h3>
+          <p>Fast admission updates, exam feeds, and early release news.</p>
+        </article>
+        <article class="update-card glass-card reveal">
+          <h3>Practical Solutions</h3>
+          <p>Exam questions with solutions and premium study support.</p>
+        </article>
+        <article class="update-card glass-card reveal">
+          <h3>Midnight Uploads</h3>
+          <p>Late night drops and high-value study bundles.</p>
+        </article>
+        <article class="update-card glass-card reveal">
+          <h3>VIP Packages</h3>
+          <p>Exclusive exam packs, alerts, and priority support.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="dynamic-posts container reveal">
+      <div class="section-header">
+        <p>Fresh Posts</p>
+        <h2>Recent Announcements</h2>
+      </div>
+      <div class="pin-panel glass-card reveal">
+        <p>Subject pins are controlled by the private admin portal. Visitors only see published posts and do not need the admin password.</p>
+      </div>
+      <div class="posts-grid" id="postGrid">
+        <div class="empty-state glass-card">
+          <p>No updates yet. Visit the <a href="admin.html">Admin Panel</a> to add posts.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="vip-section container" id="vip">
+      <div class="section-header reveal">
+        <p>Premium</p>
+        <h2>VIP Access Plans</h2>
+      </div>
+      <div class="pricing-grid">
+        <article class="price-card glass-card reveal">
+          <span class="plan-tag">Free</span>
+          <h3>Free Access</h3>
+          <p>Get weekly summaries and community alerts.</p>
+          <ul>
+            <li>Basic updates</li>
+            <li>Open announcements</li>
+            <li>Telegram feed</li>
+          </ul>
+          <a class="btn btn-outline" href="#contact">Start Free</a>
+        </article>
+        <article class="price-card glass-card reveal">
+          <span class="plan-tag plan-highlight">VIP</span>
+          <h3>VIP Access</h3>
+          <p>Priority exam releases, verified uploads, and alerts.</p>
+          <ul>
+            <li>Priority updates</li>
+            <li>Exclusive study files</li>
+            <li>Midnight alerts</li>
+          </ul>
+          <a class="btn btn-glow" href="https://wa.me/9135058474">Join VIP</a>
+        </article>
+        <article class="price-card glass-card reveal">
+          <span class="plan-tag">Ultimate</span>
+          <h3>Ultimate Package</h3>
+          <p>Complete exam kit, one-on-one support, and archive access.</p>
+          <ul>
+            <li>Full premium pack</li>
+            <li>Priority response</li>
+            <li>All exam zones</li>
+          </ul>
+          <a class="btn btn-primary" href="#contact">Go Ultimate</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="testimonials container reveal">
+      <div class="section-header">
+        <p>Reviews</p>
+        <h2>Trusted by Students</h2>
+      </div>
+      <div class="testimonial-grid">
+        <article class="testimonial-card glass-card">
+          <p>"Exam Hub gave me fast exam updates that helped me stay ahead of deadlines."</p>
+          <h4>Sarah A.</h4>
+          <span>NECO Student</span>
+        </article>
+        <article class="testimonial-card glass-card">
+          <p>"I joined the VIP package and received exclusive verified notifications every night."</p>
+          <h4>Daniel M.</h4>
+          <span>WAEC Candidate</span>
+        </article>
+        <article class="testimonial-card glass-card">
+          <p>"Their premium exam alerts feel secure and professional. Highly recommended."</p>
+          <h4>Joyce T.</h4>
+          <span>JAMB Aspirant</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section container" id="contact">
+      <div class="section-header reveal">
+        <p>Connect</p>
+        <h2>Contact Exam Hub</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-panel glass-card reveal">
+          <h3>Quick Contact</h3>
+          <div class="contact-item">
+            <span>WhatsApp</span>
+            <a href="https://wa.me/9135058474" target="_blank" rel="noreferrer">+9135058474</a>
+          </div>
+          <div class="contact-item">
+            <span>Telegram</span>
+            <a href="https://t.me/IKAY01" target="_blank" rel="noreferrer">@IKAY01</a>
+          </div>
+          <div class="contact-item">
+            <span>Instagram</span>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer">@examhub</a>
+          </div>
+          <div class="social-icons">
+            <a href="https://wa.me/9135058474" target="_blank" rel="noreferrer">W</a>
+            <a href="https://t.me/IKAY01" target="_blank" rel="noreferrer">T</a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer">I</a>
+          </div>
+        </div>
+        <form class="contact-form glass-card reveal" id="contactForm">
+          <h3>Send a Message</h3>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <p class="form-response" id="formResponse"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div class="footer-grid reveal">
+      <div>
+        <h4>Exam Hub</h4>
+        <p>Premium exam updates platform for WAEC, NECO, JAMB and more.</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <a href="#home">Home</a>
+        <a href="#updates">Latest Updates</a>
+        <a href="#vip">VIP</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h5>Follow Us</h5>
+        <a href="https://wa.me/9135058474" target="_blank" rel="noreferrer">WhatsApp</a>
+        <a href="https://t.me/IKAY01" target="_blank" rel="noreferrer">Telegram</a>
+        <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
+    </div>
+    <p class="copyright">© EXAM HUB 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam Hub Admin Panel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="admin-page locked">
+  <div class="admin-lock-screen" id="adminLockScreen">
+    <div class="admin-lock-card glass-card">
+      <h2 id="adminLockTitle">Admin Access Required</h2>
+      <p id="adminLockMessage">Enter the secret admin password to manage posts and updates.</p>
+      <form id="adminLoginForm">
+        <label for="adminPassword">Admin Password</label>
+        <input id="adminPassword" type="password" placeholder="Enter password" required />
+        <div class="admin-confirm-group hidden" id="adminConfirmGroup">
+          <label for="adminPasswordConfirm">Confirm Password</label>
+          <input id="adminPasswordConfirm" type="password" placeholder="Confirm password" />
+        </div>
+        <button type="submit" class="btn btn-primary" id="adminLoginButton">Unlock Admin</button>
+        <p class="form-response" id="adminLoginError"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="admin-shell" id="adminContent">
+    <aside class="sidebar glass-card reveal">
+      <div class="brand-block">
+        <h2>EXAM HUB</h2>
+        <span>Admin Panel</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#dashboard" class="active">Dashboard</a>
+        <a href="#upload">Upload Posts</a>
+        <a href="#updates">Updates</a>
+        <a href="#notifications">Notifications</a>
+        <a href="#users">Users</a>
+        <a href="#settings">Settings</a>
+        <a id="logoutLink" href="#logout">Logout</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-header glass-card reveal">
+        <div>
+          <h1>Admin Dashboard</h1>
+          <p>Manage posts, announcements, and premium updates securely.</p>
+        </div>
+        <button class="btn btn-glow" onclick="window.location='index.html'">View Site</button>
+      </header>
+
+      <section class="admin-grid container">
+        <article class="admin-card glass-card reveal" id="dashboard">
+          <h3>Overview</h3>
+          <div class="dashboard-stats">
+            <div>
+              <span>Posts</span>
+              <strong id="adminCount">0</strong>
+            </div>
+            <div>
+              <span>Announcements</span>
+              <strong id="announcementCount">0</strong>
+            </div>
+            <div>
+              <span>Active Users</span>
+              <strong>1,248</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="admin-card glass-card reveal" id="upload">
+          <h3>Upload Post</h3>
+          <form id="postForm" class="admin-form">
+            <label for="postTitle">Title</label>
+            <input id="postTitle" type="text" placeholder="Update title" required />
+            <label for="postCategory">Category</label>
+            <select id="postCategory">
+              <option value="WAEC">WAEC</option>
+              <option value="NECO">NECO</option>
+              <option value="JAMB">JAMB</option>
+              <option value="Practical">Practical Solutions</option>
+              <option value="Midnight">Midnight Uploads</option>
+              <option value="VIP">VIP Packages</option>
+            </select>
+            <label for="postText">Message</label>
+            <textarea id="postText" rows="5" placeholder="Post content" required></textarea>
+            <label for="postAnswer">Answer / Solution</label>
+            <textarea id="postAnswer" rows="4" placeholder="Answer details or solution text"></textarea>
+            <label for="postImage">Image URL</label>
+            <input id="postImage" type="url" placeholder="Optional image URL" />
+            <label for="postImageFile">Upload Photo</label>
+            <input id="postImageFile" type="file" accept="image/*" />
+            <button type="submit" class="btn btn-primary">Publish Update</button>
+            <p class="form-response" id="adminResponse"></p>
+          </form>
+        </article>
+
+        <article class="admin-card glass-card reveal" id="subject-pins">
+          <h3>Subject Pin Access</h3>
+          <form id="pinForm" class="admin-form">
+            <label for="pinWaec">WAEC PIN</label>
+            <input id="pinWaec" type="text" placeholder="Enter WAEC pin" />
+            <label for="pinNeco">NECO PIN</label>
+            <input id="pinNeco" type="text" placeholder="Enter NECO pin" />
+            <label for="pinJamb">JAMB PIN</label>
+            <input id="pinJamb" type="text" placeholder="Enter JAMB pin" />
+            <label for="pinPremium">Premium PIN</label>
+            <input id="pinPremium" type="text" placeholder="Enter Premium pin for all answer posts" />
+            <button type="submit" class="btn btn-glow">Save Pins</button>
+            <p class="form-response" id="pinResponse"></p>
+          </form>
+        </article>
+
+        <article class="admin-card glass-card reveal" id="updates">
+          <div class="admin-card-header">
+            <h3>Manage Updates</h3>
+            <span>Click edit to modify or remove posts.</span>
+          </div>
+          <div class="posts-panel" id="adminPosts"></div>
+        </article>
+
+        <article class="admin-card glass-card reveal" id="notifications">
+          <h3>Latest Notifications</h3>
+          <ul class="admin-notifications">
+            <li>System secure: 2FA ready.</li>
+            <li>New VIP plan template added.</li>
+            <li>Post sync active between admin and homepage.</li>
+          </ul>
+        </article>
+
+        <article class="admin-card glass-card reveal" id="users">
+          <h3>User Activity</h3>
+          <ul class="admin-users">
+            <li>Active subscribers: 1,248</li>
+            <li>Monthly VIP signups: 78</li>
+            <li>Message responses: 96%</li>
+          </ul>
+        </article>
+
+        <article class="admin-card glass-card reveal" id="settings">
+          <h3>Panel Settings</h3>
+          <p>Use the theme toggle on the main site and maintain secure content management.</p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
